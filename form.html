@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чайная коллекция - Заказ чая</title>
+    <link rel="stylesheet" href="passport-image.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav style="background: #ffffff;">
+        <a href="index1.html">Главная</a>
+        <a href="index.html">Паспорт</a>
+        <a href="form.html" class="active">Заказать чай</a>
+        <a href="algorithm.html">Алгоритмическая задача</a>
+    </nav>
+
+    <div class="container">
+        <h1>Заказ чая</h1>
+
+       
+        <form id="contactForm" action="https://httpbin.org/post" method="POST" class="order-form">
+            <h2>Контактные данные</h2>
+            
+            <div class="form-group">
+                <label for="lastname">Фамилия *</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname">Имя *</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="group">Группа *</label>
+                <input type="text" id="group" name="group" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Мобильный телефон *</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Электронная почта *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message_date">Дата отправки сообщения</label>
+                <input type="date" id="message_date" name="message_date">
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить контактные данные</button>
+        </form>
+
+        
+        <form id="teaOrderForm" action="https://httpbin.org/post" method="POST" class="order-form">
+            <h2>Заказ чая</h2>
+
+            
+            <input type="hidden" name="order_type" value="tea_order">
+
+            
+            <div class="form-group">
+                <label for="customer_name">Ваше имя для заказа *</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="tea_quantity">Количество упаковок (50г каждая) *</label>
+                <input type="number" id="tea_quantity" name="tea_quantity" min="1" max="10" value="1" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label>Тип чая *</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="tea_type" value="green" checked>
+                        Зеленый чай
+                    </label>
+                    <label>
+                        <input type="radio" name="tea_type" value="black">
+                        Черный чай
+                    </label>
+                    <label>
+                        <input type="radio" name="tea_type" value="oolong">
+                        Улун
+                    </label>
+                    <label>
+                        <input type="radio" name="tea_type" value="white">
+                        Белый чай
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label>Дополнительные опции</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="add_options" value="gift_pack">
+                        Подарочная упаковка (+200₽)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="add_options" value="tea_filter">
+                        Фильтр-пакеты (+50₽)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="add_options" value="instructions">
+                        Инструкция по завариванию
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="delivery_date">Желаемая дата доставки</label>
+                <input type="date" id="delivery_date" name="delivery_date">
+            </div>
+
+            
+            <div class="form-group">
+                <label for="order_password">Пароль для отслеживания заказа *</label>
+                <input type="password" id="order_password" name="order_password" required minlength="6">
+            </div>
+
+            
+            <div class="form-group">
+                <label for="tea_review">Ваш отзыв о чае</label>
+                <textarea id="tea_review" name="tea_review" rows="4" placeholder="Поделитесь вашими впечатлениями о чае..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Оформить заказ чая</button>
+        </form>
+    </div>
+
+    
+</body>
+
+</html>

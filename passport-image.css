@@ -1,0 +1,348 @@
+
+.scaled-photo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+}
+
+
+.photo-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.photo-container {
+    position: relative; 
+    display: inline-block;
+    width: 400px; 
+}
+
+.scaled-photo {
+    width: 400px; 
+    height: auto;
+    display: block;
+}
+
+.passport-text {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-family: Arial, sans-serif;
+    pointer-events: none; 
+}
+
+.text-mvd {
+    position: absolute;
+    top: 100px;
+    left: 90px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.text-date {
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.text-surname {
+    position: absolute;
+    top: 380px;
+    left: 190px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text-name {
+    position: absolute;
+    top: 410px;
+    left: 190px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text-patronymic {
+    position: absolute;
+    top: 440px;
+    left: 190px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text-birthdate {
+    position: absolute;
+    top: 460px;
+    left: 300px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.text-birthplace {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.spacer {
+    display: inline-block;
+    width: 80px;
+}
+
+
+.feature-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #1A3397;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.feature-link:hover {
+    background: #152a7a;
+    color: white;
+}
+
+
+.tea-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tea-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 3px solid #1A3397;
+}
+
+
+.welcome-section {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #1A3397;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item h3 {
+    color: #1A3397;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    color: #1A3397;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: #1A3397;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1A3397;
+}
+
+
+.order-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 30px 0;
+    border: 2px solid #1A3397;
+}
+
+.order-form h2 {
+    color: #1A3397;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #1A3397;
+    outline: none;
+}
+
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #1A3397;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #152a7a;
+}
+
+
+@media (max-width: 768px) {
+    .order-form {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .radio-group,
+    .checkbox-group {
+        gap: 8px;
+    }
+}
+
+
+.tea-thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #1A3397;
+}
+
+
+nav {
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+    color: #1A3397;
+    font-weight: bold;
+    border-bottom: 2px solid #1A3397;
+}
+
+nav a:hover {
+    color: #1A3397;
+}

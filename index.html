@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чайная коллекция</title>
+    <link rel="stylesheet" href="passport-image.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav style="background: #ffffff;">
+        <a href="index1.html">Главная</a>
+        <a href="index.html" class="active">Паспорт</a>
+        <a href="form.html">Заказать чай</a>
+        <a href="algorithm.html">Алгоритмическая задача</a>
+    </nav>
+    <a href="#screenshot">DOM_JS</a>
+    <div class="container">
+        <button onclick="toggleLanguage()">Изменить язык</button>
+        
+        <div class="photo-container">
+            <img src="passport.jpg" alt="passport" class="scaled-photo">
+            <div class="passport-text">
+                <p id="text-mvd" class="text-mvd">МВД ПО РЕСПУБЛИКЕ ТАТАРСТАН</p>
+                <p id="text-date" class="text-date">09.07.2020<span class="spacer"></span>160-06</p>
+                <p id="text-surname" class="text-surname">МУХАРЛЯМОВА</p>
+                <p id="text-name" class="text-name">АРИНА</p>
+                <p id="text-patronymic" class="text-patronymic">АРТУРОВНА</p>
+                <p id="text-birthdate" class="text-birthdate">26.06.2006</p>
+                <p id="text-birthplace" class="text-birthplace">Г. КАЗАНЬ</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="dom-title" style="color: #1A3397; text-align: center;">DOM_JS. Считываем информацию из DOM</h1>
+
+    <div id="screenshot" class="infa">
+        <img src="screen.png" alt="Достаем инфу из DOM" style="max-width: 50%; height: auto; display: block; margin: 20px auto;">
+    </div>
+
+    <a href="#top">
+        <h2>Наверх</h2>
+    </a>
+
+    
+</body>
+
+</html>
