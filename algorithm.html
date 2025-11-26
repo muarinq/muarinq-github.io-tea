@@ -11,7 +11,7 @@
 <body>
     <nav style="background: #ffffff;">
         <a href="index1.html">Главная</a>
-        <a href="index.html">Паспорт</a>
+        <a href="index.html">Виды чая</a>
         <a href="form.html">Заказать чай</a>
         <a href="algorithm.html" class="active">Алгоритмическая задача</a>
     </nav>
@@ -25,11 +25,11 @@
             <div class="task-condition">
                 <p><strong>Задача:</strong> Рассчитать оптимальное время заваривания чая в зависимости от его типа и количества</p>
                 <p><strong>Дано:</strong></p>
-                <ul>
+                <ol>
                     <li>Тип чая: зеленый, черный, улун, белый, пуэр</li>
                     <li>Количество чая: в граммах</li>
                     <li>Объем воды: в миллилитрах</li>
-                </ul>
+                </ol>
                 <p><strong>Найти:</strong> Оптимальное время заваривания в минутах</p>
             </div>
         </div>
@@ -76,11 +76,11 @@
             <h2>Используемые формулы</h2>
             <p>Время заваривания = Базовое время × Коэффициент количества × Коэффициент объема</p>
             <p>Где:</p>
-            <ul>
+            <ol>
                 <li>Базовое время зависит от типа чая</li>
                 <li>Коэффициент количества = Количество чая / 5</li>
                 <li>Коэффициент объема = Объем воды / 250</li>
-            </ul>
+            </ol>
         </div>
     </div>
 
@@ -132,12 +132,12 @@
             
             const details = `
                 <p><strong>Детали расчета:</strong></p>
-                <ul>
+                <ol>
                     <li>Базовое время для ${teaNames[teaType]}: ${baseTime} мин</li>
                     <li>Коэффициент количества (${teaAmount}г / 5г): ${amountCoefficient.toFixed(2)}</li>
                     <li>Коэффициент объема (${waterVolume}мл / 250мл): ${volumeCoefficient.toFixed(2)}</li>
                     <li>Итог: ${baseTime} × ${amountCoefficient.toFixed(2)} × ${volumeCoefficient.toFixed(2)} = ${roundedTime} мин</li>
-                </ul>
+                </ol>
             `;
 
             

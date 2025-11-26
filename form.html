@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чайная коллекция - Заказ чая</title>
     <link rel="stylesheet" href="passport-image.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
     <nav style="background: #ffffff;">
         <a href="index1.html">Главная</a>
-        <a href="index.html">Паспорт</a>
+        <a href="index.html">Виды чая</a>
         <a href="form.html" class="active">Заказать чай</a>
         <a href="algorithm.html">Алгоритмическая задача</a>
     </nav>
@@ -20,65 +18,52 @@
     <div class="container">
         <h1>Заказ чая</h1>
 
-       
-        <form id="contactForm" action="https://httpbin.org/post" method="POST" class="order-form">
+        <form id="teaOrderForm" action="https://httpbin.org/post" method="POST" class="order-form">
             <h2>Контактные данные</h2>
             
-            <div class="form-group">
-                <label for="lastname">Фамилия *</label>
-                <input type="text" id="lastname" name="lastname" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="customer_lastname" class="required">Фамилия</label>
+                    <input type="text" id="customer_lastname" name="customer_lastname" value="Иванов" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer_firstname" class="required">Имя</label>
+                    <input type="text" id="customer_firstname" name="customer_firstname" value="Иван" required>
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="firstname">Имя *</label>
-                <input type="text" id="firstname" name="firstname" required>
+                <label for="customer_group" class="required">Группа/Организация</label>
+                <input type="text" id="customer_group" name="customer_group" value="Студенческая группа" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="customer_phone" class="required">Мобильный телефон</label>
+                    <input type="tel" id="customer_phone" name="customer_phone" pattern="[0-9]{11}" value="79001234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer_email" class="required">Электронная почта</label>
+                    <input type="email" id="customer_email" name="customer_email" value="example@domain.com" required>
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="group">Группа *</label>
-                <input type="text" id="group" name="group" required>
+                <label for="order_date">Дата оформления заказа</label>
+                <input type="date" id="order_date" name="order_date" value="2023-11-15">
+            </div>
+
+            <h2>Детали заказа</h2>
+
+            <div class="form-group">
+                <label for="tea_quantity" class="required">Количество упаковок (50г каждая)</label>
+                <input type="number" id="tea_quantity" name="tea_quantity" min="1" max="10" value="2" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">Мобильный телефон *</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Электронная почта *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message_date">Дата отправки сообщения</label>
-                <input type="date" id="message_date" name="message_date">
-            </div>
-
-            <button type="submit" class="submit-btn">Отправить контактные данные</button>
-        </form>
-
-        
-        <form id="teaOrderForm" action="https://httpbin.org/post" method="POST" class="order-form">
-            <h2>Заказ чая</h2>
-
-            
-            <input type="hidden" name="order_type" value="tea_order">
-
-            
-            <div class="form-group">
-                <label for="customer_name">Ваше имя для заказа *</label>
-                <input type="text" id="customer_name" name="customer_name" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label for="tea_quantity">Количество упаковок (50г каждая) *</label>
-                <input type="number" id="tea_quantity" name="tea_quantity" min="1" max="10" value="1" required>
-            </div>
-
-            
-            <div class="form-group">
-                <label>Тип чая *</label>
+                <label class="required">Тип чая</label>
                 <div class="radio-group">
                     <label>
                         <input type="radio" name="tea_type" value="green" checked>
@@ -96,51 +81,84 @@
                         <input type="radio" name="tea_type" value="white">
                         Белый чай
                     </label>
+                    <label>
+                        <input type="radio" name="tea_type" value="pu-erh">
+                        Пуэр
+                    </label>
                 </div>
             </div>
 
-            
+            <div class="form-group">
+                <label for="tea_origin">Регион происхождения</label>
+                <select id="tea_origin" name="tea_origin">
+                    <option value="china" selected>Китай</option>
+                    <option value="india">Индия</option>
+                    <option value="sri-lanka">Шри-Ланка</option>
+                    <option value="japan">Япония</option>
+                    <option value="taiwan">Тайвань</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label>Дополнительные опции</label>
                 <div class="checkbox-group">
                     <label>
-                        <input type="checkbox" name="add_options" value="gift_pack">
+                        <input type="checkbox" name="gift_pack" value="yes" checked>
                         Подарочная упаковка (+200₽)
                     </label>
                     <label>
-                        <input type="checkbox" name="add_options" value="tea_filter">
+                        <input type="checkbox" name="tea_filter" value="yes">
                         Фильтр-пакеты (+50₽)
                     </label>
                     <label>
-                        <input type="checkbox" name="add_options" value="instructions">
+                        <input type="checkbox" name="brewing_instructions" value="yes" checked>
                         Инструкция по завариванию
                     </label>
                 </div>
             </div>
 
-            
             <div class="form-group">
                 <label for="delivery_date">Желаемая дата доставки</label>
-                <input type="date" id="delivery_date" name="delivery_date">
+                <input type="date" id="delivery_date" name="delivery_date" value="2023-11-20">
             </div>
 
-            
             <div class="form-group">
-                <label for="order_password">Пароль для отслеживания заказа *</label>
-                <input type="password" id="order_password" name="order_password" required minlength="6">
-            </div>
+                <label for="order_password" class="required">Пароль для отслеживания заказа</label>
+                    <input type="password" id="order_password" name="order_password" value="secure123" required minlength="6">
+                </div>
 
-            
-            <div class="form-group">
-                <label for="tea_review">Ваш отзыв о чае</label>
-                <textarea id="tea_review" name="tea_review" rows="4" placeholder="Поделитесь вашими впечатлениями о чае..."></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="tea_review">Ваш отзыв о чае</label>
+                    <textarea id="tea_review" name="tea_review" rows="4" placeholder="Поделитесь вашими впечатлениями о чае...">Отличный чай, буду заказывать еще!</textarea>
+                </div>
 
-            <button type="submit" class="submit-btn">Оформить заказ чая</button>
-        </form>
-    </div>
+                <button type="submit" class="submit-btn">Оформить заказ чая</button>
+            </form>
+        </div>
 
-    
-</body>
-
-</html>
+        <script>
+            document.getElementById('teaOrderForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const formData = new FormData(form);
+                for (let [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
+                
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Успешно отправлено:', data);
+                    alert('Ваш заказ успешно оформлен!');
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при оформлении заказа. Пожалуйста, попробуйте еще раз.');
+                });
+            });
+        </script>
+    </body>
+    </html>
